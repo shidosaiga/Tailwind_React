@@ -87,13 +87,11 @@ export default function Hero() {
             className={`flex-1 py-5 text-center ${i < stats.length - 1 ? 'border-r border-white/[0.07]' : ''}`}
           >
             <div className="text-2xl font-bold text-white">
-              {s.num.replace(/\d+/, (n) => (
-                `${n}`
-              ))}
-              <span className="text-indigo-500">
-                {s.num.replace(/[0-9]/g, '')}
-              </span>
-            </div>
+  {s.num.replace(/[+%]/g, '')}
+  <span className="text-indigo-500">
+    {s.num.replace(/[0-9]/g, '')}
+  </span>
+</div>
             <div className="text-xs text-slate-500 mt-1 uppercase tracking-widest">{s.label}</div>
           </div>
         ))}
